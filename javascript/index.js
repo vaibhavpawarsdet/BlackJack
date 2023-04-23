@@ -18,3 +18,10 @@ export function checkAce(card) {
     return 0;
 }
 
+export function reduceAce(playerSum, playerAceCount) {
+    while (playerSum > 21 && playerAceCount > 0) {
+        playerSum -= 10;
+        playerAceCount -= 1;
+    }
+    return playerSum;
+}
